@@ -35,15 +35,6 @@ type Predicate = unsafe fn(&mut L2CAgentBase, Hash40) -> bool;
         )*
     };
 }
-
-#[macro_export] macro_rules! reset_hooks {
-    () => {
-        unsafe {
-            acmd::acmd_reset_hooks();
-        }
-    };
-}
-
 extern "Rust" {
     pub fn add_acmd_load_hook(callback: Callback, predicate: Predicate);
     pub fn add_acmd_load_weapon_hook(callback: WeaponCallback, predicate: Predicate);
