@@ -61,5 +61,5 @@ extern "Rust" {
     pub fn add_acmd_load_weapon_hook(callback: WeaponCallback, predicate: Predicate);
     pub fn acmd_remove_hook(callback: Callback, predicate: Predicate);
     pub fn acmd_remove_weapon_hook(callback: WeaponCallback, predicate: Predicate);
-
+    pub fn acmd_reset_hooks();
 }
